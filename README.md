@@ -68,30 +68,29 @@ To run this project locally, you will need Python 3.9+ and free accounts with Mo
 
 1. Clone the repository and set up the environment:
 
-```bash
+````bash
 git clone [https://github.com/](https://github.com/)[YOUR_USERNAME]/market-intelligence-platform.git
 cd market-intelligence-platform
 python -m venv venv
 source venv/bin/activate  # On Windows use: .\venv\Scripts\activate
 
 2. Install dependencies:
-```bash
+````bash
 pip install -r backend/requirements.txt
 pip install -r frontend/requirements.txt
 
 3. Set up Environment Variables:
 Create a .env file inside the backend/ directory:
-```text
+````text
 MONGODB_URL="mongodb+srv://<username>:<password>@cluster0..."
 FMP_API_KEY="your_financial_modeling_prep_api_key"
 
 4. Run the Application (Requires Two Terminals):
 Terminal 1 (Backend):
-```bash
+````bash
 uvicorn backend.main:app --reload
 
 Terminal 2 (Frontend):
-```bash
+````bash
 streamlit run frontend/app.py
 
-````
